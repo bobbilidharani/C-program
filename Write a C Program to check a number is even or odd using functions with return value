@@ -1,0 +1,22 @@
+ Write a C Program to check a number is even or odd using functions with return value 
+
+
+#include<stdio.h>
+void main()
+{
+int X, ans;
+printf("NO");
+scanf("%d",&X);
+ans=checkevenodd(x);
+if(ans==0)
+printf("even");
+else
+printf("odd");
+}
+int check evenodd(int X)
+{
+if(X%2==)
+return (0);
+else
+return (1);
+}
