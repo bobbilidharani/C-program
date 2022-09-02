@@ -1,0 +1,18 @@
+Write a C Program to find FACTORIAL of a number using functions with return value
+
+#include<stdio.h>
+int main()
+{
+printf("Enter a number to find Factorial:");
+printf("\nFactorial of a given number is:%d", fact());
+}
+int fact()
+{
+int i, fact=1,n;
+scanf("%d",&n);
+for(i=1;i<=n;i++)
+{
+fact=fact*i;
+}
+return fact;
+}
