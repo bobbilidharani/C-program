@@ -1,0 +1,31 @@
+Using a helper stick (peg), shift all rings from peg A to peg B using peg C.
+
+All rings are initally placed in ascending order, smallest being on top.
+
+No bigger ring can be placed over a smaller ring.
+
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+ {
+    int num;
+    scanf("%d", &num);
+    towers(num,'A','B','C');
+    return 0;
+}
+void towers(int num, char source, char target, char temp)
+{
+    if(num==1)
+    {
+        printf("Moving ring 1 from %c to %c\n", source, target);
+        return;
+    }
+    //Recursively calling function twice
+    towers(num - 1,source, temp, target);
+    printf("Moving ring %d from %c to %c\n", num, source, target);
+    towers(num - 1, temp, target, source);
+}
